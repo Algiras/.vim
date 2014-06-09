@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -21,7 +23,6 @@ Bundle 'dkprice/vim-easygrep'
 Bundle 'mattn/emmet-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'wookiehangover/jshint.vim'
-Bundle 'juvenn/mustache.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'Townk/vim-autoclose'
@@ -37,12 +38,13 @@ Bundle 'tpope/vim-sensible'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'bling/vim-airline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'mhinz/vim-signify'
 Bundle 'Shougo/unite.vim'
 Bundle 'chriskempson/tomorrow-theme'
+Bundle 'vimplugin/project.vim'
+Bundle 'juvenn/mustache.vim'
 
 Bundle 'majutsushi/tagbar'
 Bundle 'altercation/vim-colors-solarized'
@@ -54,7 +56,6 @@ Bundle 'FuzzyFinder'
 Bundle 'vim-addon-mw-utils'
 
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -147,6 +148,7 @@ set guifont=Meslo\ LG\ M\ for\ Powerline\ 10
 
 " Enable syntax highlighting
 set regexpengine=1
+syntax on
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -420,7 +422,7 @@ endfunction
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" Solarized theme settings
+" Codeschool theme settings
 set background=dark
 colorscheme codeschool 
 
@@ -437,28 +439,15 @@ endif
 "Emmet remap
  imap <C-e> <C-y>,
 
-" You Complete me
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_confirm_extra_conf=0
-set completeopt-=preview
-let g:ycm_min_num_of_chars_for_completion = 3 
-
 " NerdTree shortcut
 map <C-n> :NERDTreeToggle<CR>
 
 let g:airline#extensions#tabline#enabled = 1
 
-if !exists('g:airline_theme')
-    let g:airline_theme = 'solarized'
-endif
-
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 let g:airline_enable_prefix = '⎇ '
 
 let g:airline_section_x=""
