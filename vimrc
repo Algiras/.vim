@@ -45,9 +45,12 @@ Bundle 'Shougo/unite.vim'
 Bundle 'chriskempson/tomorrow-theme'
 Bundle 'vimplugin/project.vim'
 Bundle 'juvenn/mustache.vim'
-
 Bundle 'majutsushi/tagbar'
 Bundle 'altercation/vim-colors-solarized'
+
+
+"Node
+Bundle 'moll/vim-node'
 
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
