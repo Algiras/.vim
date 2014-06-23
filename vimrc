@@ -48,6 +48,9 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'altercation/vim-colors-solarized'
 
+" Monokai color scheme
+Bundle 'lsdr/monokai'
+
 
 "Node
 Bundle 'moll/vim-node'
@@ -427,7 +430,7 @@ autocmd FileType html,css EmmetInstall
 
 " Codeschool theme settings
 set background=dark
-colorscheme codeschool 
+colorscheme monokai 
 
 "EastMotion Plugin
 nmap s <Plug>(easymotion-s)
@@ -444,8 +447,6 @@ endif
 
 " NerdTree shortcut
 map <C-n> :NERDTreeToggle<CR>
-
-let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
