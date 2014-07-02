@@ -1,2 +1,3 @@
-"My AWESOME Vimrc"
-Use Vundle and stay awesome
+# My AWESOME Vimrc
+
+Use [Vundle](https://github.com/gmarik/Vundle.vim) and stay awesome
